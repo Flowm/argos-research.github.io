@@ -7,5 +7,8 @@ entries:
   folders:
 
   - title: Overview
-    url: /index.html
-    output: web, pdf
+    output: web
+    folderitems:
+    - title: News
+      url: /index.html
+      output: web
