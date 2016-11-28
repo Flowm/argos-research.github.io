@@ -20,8 +20,8 @@ folder: "70nADOS"
 
   * change "PROJECT" inside Makefile to your needs
   * adjust memory size and number of cores inside Vagrant file to fit your hardware
-  * run "ip a" on your local machine and change the dev option inside bootstrap.h to your LAN adapter
-  * vagrant up (Wait until it finished. This may take some time. Machine will throw a tty error when finished...)
+  * run "ip a" on your local machine and change the dev option inside bootstrap.sh to your LAN adapter
+  * vagrant up (Wait until it finished. This may take some time. Machine will throw a tty error when finished, please ignore this as long as no other errors occur...)
   * run "vagrant ssh" to log into vm
   * inside vm run "cd /vagrant"
   * and run "make run"
