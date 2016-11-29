@@ -1,19 +1,10 @@
-## Jekyll Documentation theme
+## How to use this theme
+Find, add and edit pages in the [pages/](pages/) directory.
+Documentation regarding all of 702nADOS should be placed in the subdirectory [pages/702nADOS](pages/702nADOS).
+Pages for single subprojects of 702nADOS should be placed in separate subdirectories inside [pages/](pages/).
 
-Build the site to see the instructions for using it. Or just go here: [http://idratherbewriting.com/documentation-theme-jekyll/](http://idratherbewriting.com/documentation-theme-jekyll/)
+If a page should be displayed in the sidebar menu, it has to be added to the file [_data/sidebars/main_sidebar.yml](_data/sidebars/main_sidebar.yml).
 
-## Running the site in Docker
-
-You can also use Docker to directly build and run the site on your local machine. Just clone the repo and run the following from your working dir:
-
-```
-docker build --no-cache -t mydocs .
-```
-
-Once the build is complete, you can mount and run the whole site as follows:
-
-```
-docker run -v "$PWD:/src" -p 4000:4000 mydocs serve -H 0.0.0.0
-```
-This is perhaps the easiest way to see how your site would actually look.
+### Jekyll Documentation theme
+Detailed information on how to use this theme can be found at [http://idratherbewriting.com/documentation-theme-jekyll/](http://idratherbewriting.com/documentation-theme-jekyll/)
 
