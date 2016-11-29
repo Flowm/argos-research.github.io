@@ -34,7 +34,8 @@ Github handle: [@privatereese](https://github.com/privatereese)
 Github handle: [@Khesp](https://github.com/Khesp)
 
 #### Hendrik Leppelsack
-`description missing`
+*[TrackConverter](https://github.com/702nADOS/SpeedDreams-SUMO-TrackConverter),*
+*[MQTT on Genode]()*
 
 Github handle: [@Henni](https://github.com/Henni)
 
