@@ -12,14 +12,18 @@ entries:
     - title: Welcome
       url: /index.html
       output: web
+
+  - title: Contribute
+    output: web
+    folderitems:
+    - title: How to contribute
+      url: /contribute.html
+      output: web
     - title: Repository Structure
       url: /repo_structure.html
       output: web
     - title: Code Structure
       url: /code_structure.html
-      output: web
-    - title: How to contribute
-      url: /contribute.html
       output: web
     - title: Coding Standards
       url: /code_standards.html
