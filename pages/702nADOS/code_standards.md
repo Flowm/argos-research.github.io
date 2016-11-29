@@ -6,6 +6,6 @@ tags: []
 summary: ""
 sidebar: main_sidebar
 permalink: code_standards.html
-folder: "70nADOS"
+folder: "702nADOS"
 ---
 
