@@ -2,8 +2,7 @@
 
 entries:
 - title: sidebar
-  product: argOS
-  version: 1.0
+  product: argOS Research
   folders:
 
   - title: Overview
