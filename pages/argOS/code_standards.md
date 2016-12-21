@@ -1,11 +1,11 @@
 ---                                                                                                                                                                                                 
-title: Repository Structure
+title: Code Standards
 keywords:
 last_updated: November 24, 2016
 tags: []
 summary: ""
 sidebar: main_sidebar
-permalink: repo_structure.html
-folder: "702nADOS"
+permalink: code_standards.html
+folder: "argOS"
 ---
 

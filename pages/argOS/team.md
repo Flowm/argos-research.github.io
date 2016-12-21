@@ -6,7 +6,7 @@ tags: []
 summary: ""
 sidebar: main_sidebar
 permalink: team.html
-folder: "702nADOS"
+folder: "argOS"
 ---
 
 ### Maintainer
@@ -34,7 +34,7 @@ Github handle: [@privatereese](https://github.com/privatereese)
 Github handle: [@Khesp](https://github.com/Khesp)
 
 #### Hendrik Leppelsack
-*[TrackConverter](https://github.com/702nADOS/SpeedDreams-SUMO-TrackConverter),*
+*[TrackConverter](https://github.com/argOS-research/SpeedDreams-SUMO-TrackConverter),*
 *[MQTT on Genode]()*
 
 Github handle: [@Henni](https://github.com/Henni)
