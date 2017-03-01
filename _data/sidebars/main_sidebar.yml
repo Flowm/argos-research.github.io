@@ -14,6 +14,22 @@ entries:
     - title: Team
       url: /team.html
       output: web
+    - title: Roadmap
+      url: /roadmap.html
+      output: web
+    - title: Challenges
+      url: /challenges.html
+      output: web
+
+  - title: First Steps
+    output: web
+    folderitems:
+    - title: Install
+      url: /install.html
+      output: web
+    - title: Getting Started
+      url: /getting-started.html
+      output: web
 
   - title: Contribute
     output: web
