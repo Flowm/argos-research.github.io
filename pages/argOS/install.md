@@ -44,10 +44,23 @@ $> cd /vagrant
 $> sudo make run
 ```
 
+# Alternative (Platform) Install
+
+Change `GENODE_TARGET` inside the `Makefile` (valid targets are):
+
+* `focnados_pbxa9`
+
+* `focnados_panda`
+
+* `foc_rpi`
+
+Execute the following steps:
+
+```sh
+$> make build_dir
+$> sudo make run
+```
+
 # Next Steps
 
-* Build for other platforms
-
-* Auxiliary files (e.g. uboot)
-
-* Setup with PXE Boot (e.g. PandaBoard ES)
+See [Getting Started](/getting-started.html)
