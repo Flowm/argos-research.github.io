@@ -13,6 +13,8 @@ folder: "argOS"
 
 ## Prerequisites
 
+- Ubuntu 16.04
+
 - git
 
 - [oracle virtualbox](https://www.virtualbox.org)
@@ -21,12 +23,10 @@ folder: "argOS"
 
 ## Quick Steps
 
-> git clone https://github.com/argos-research/operating-system.git
-
-> cd operating-system
-
-> git submodule init
-
-> git submodule update
-
-> vagrant up
+```sh
+$> git clone https://github.com/argos-research/operating-system.git
+$> cd operating-system
+$> git submodule init
+$> git submodule update
+$> vagrant up
+```
