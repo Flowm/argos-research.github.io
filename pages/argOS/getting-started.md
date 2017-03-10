@@ -35,7 +35,7 @@ folder: "argOS"
 
 ## PandaBoard ES
 
-1. Get the prepared u-boot files (see subsection ***Files***)
+1. Get the prepared u-boot files (see subsection **Files**)
 2. Prepare the SD card (see next section)
 3. Install your project files on the SD Card
 
@@ -75,14 +75,16 @@ echo "READY"
 
 * Execute the following steps
 
- - `GENODE_BUILD_DIR` points to the building directory of gendode (e.g. `genode-focnados_panda`)
- - `PROJECT` is the name of the project (e.g. `demo`)
-
 ```sh
 $> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/image.elf /mnt
 $> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/modules.list /mnt
 $> cp -R $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/genode /mnt
 ```
+
+* Notes
+
+  * `GENODE_BUILD_DIR` points to genode's building directory (e.g. `genode-focnados_panda`)
+  * `PROJECT` is the name of the project (e.g. `demo`)
 
 ### Howto
 Further (deeper) information about this topic can be found under the following links:
