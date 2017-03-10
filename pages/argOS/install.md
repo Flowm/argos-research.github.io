@@ -49,3 +49,5 @@ $> sudo make run
 * Build for other platforms
 
 * Auxiliary files (e.g. uboot)
+
+* Setup with PXE Boot (e.g. PandaBoard ES)
