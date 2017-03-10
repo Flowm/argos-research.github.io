@@ -41,7 +41,9 @@ folder: "argOS"
 
 ### Setup SD Card
 
-To prepare a working SD card you can use the following shell script (similar to [eewik](https://eewiki.net/display/linuxonarm/PandaBoard#PandaBoard-SetupmicroSDcard)).
+To prepare a working SD card you can use the following example script (similar to [eewiki](https://eewiki.net/display/linuxonarm/PandaBoard#PandaBoard-SetupmicroSDcard)).
+
+**We are assuming DISK=/dev/mmcblk0 as your sd card device**.
 
 ```sh
 #!/bin/bash
@@ -52,8 +54,8 @@ echo "zero ${DISK}"
 sudo dd if=/dev/zero of=${DISK} bs=1M count=10
 
 echo "Install bootloader"
-sudo dd if=./u-boot_panda-a6/MLO of=${DISK} count=1 seek=1 bs=128k
-sudo dd if=./u-boot_panda-a6/u-boot.img of=${DISK} count=2 seek=1 bs=384k
+sudo dd if=./u-boot_panda/MLO of=${DISK} count=1 seek=1 bs=128k
+sudo dd if=./u-boot_panda/u-boot.img of=${DISK} count=2 seek=1 bs=384k
 
 echo "Create Partition"
 sudo sfdisk --in-order --Linux --unit M ${DISK} <<-__EOF__
