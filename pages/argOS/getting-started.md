@@ -23,6 +23,29 @@ folder: "argOS"
 
   * Setup with PXE Boot (e.g. PandaBoard ES)
 
+Extract from `/etc/dhcp/dhcpd.conf` (See [dhcpd sample configuration](https://wiki.ubuntuusers.de/ISC-DHCPD/#Beispielkonfiguration) for furhter details)
+
+```
+host pandaboardpxe {
+  hardware ethernet 02:02:01:07:16:80;
+  fixed-address 192.168.0.10;
+  option host-name "tuinf01-pandaboard";
+  filename "pandaboard/image.elf";
+  server-name "Pandaboard-PXEserv";
+}
+host odroid {
+ hardware ethernet 00:10:75:2a:ae:e0;
+ fixed-address 192.168.0.35;
+ option host-name "odroid-u3";
+ filename "odroid/uImage";
+ server-name "Odroid-PXEserv";
+}
+
+# this is the PXE-Boot for this subnet
+next-server 131.159.12.22;
+filename "raspberry/genode.img";
+```
+
 ### vagrant
 
   * adjust memory size and number of cores inside Vagrant file to fit your hardware
@@ -102,8 +125,21 @@ Further (deeper) information about this topic can be found under the following l
 
 ## Raspberry PI
 
-[Uboot Image](https://nextcloud.os.in.tum.de/s/xAxEQYA57SIhnhz)
+* [Uboot Image](https://nextcloud.os.in.tum.de/s/xAxEQYA57SIhnhz)
+
+* [Building U-Boot](http://wiki.beyondlogic.org/index.php?title=Compiling_uBoot_RaspberryPi)
 
 ## QEMU (PBXA9)
 
 ## Odroid U3 (TODO)
+
+* [Building U-Boot](http://odroid.com/dokuwiki/doku.php?id=en:u3_building_u-boot)
+
+* [Hardware C1](http://odroid.com/dokuwiki/doku.php?id=en:c1_hardware)
+
+### Troubleshoot
+
+* http://forum.odroid.com/viewtopic.php?f=82&t=9128
+* https://github.com/mkaczanowski/u-boot/tree/odroid-u3-usbnet
+* http://stackoverflow.com/questions/21256866/libz-so-1-cannot-open-shared-object-file
+* http://stackoverflow.com/questions/34418659/arm-eabi-gcc-no-such-file-or-directory-in-cyanogenmod-source
