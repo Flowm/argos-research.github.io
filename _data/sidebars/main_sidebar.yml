@@ -30,6 +30,9 @@ entries:
     - title: Getting Started
       url: /getting-started.html
       output: web
+    - title: Simulator Coupling
+      url: /sim-coupling.html
+      output: web
 
   - title: Contribute
     output: web
