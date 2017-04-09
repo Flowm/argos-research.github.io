@@ -1,7 +1,7 @@
 ---
 title: Team
 keywords:
-last_updated: November 29, 2016
+last_updated: April 09, 2017
 tags: []
 summary: ""
 sidebar: main_sidebar
@@ -45,7 +45,7 @@ Github handle: [@Henni](https://github.com/Henni)
 Github handle: [@BugUser0815](https://github.com/BugUser0815)
 
 #### Alexander Weidinger
-`description missing`
+*[SimCoupler](https://github.com/argos-research/SimCoupler) - this includes work on the simulators [SUMO](https://github.com/argos-research/sumo) & [SpeedDreams2](https://github.com/argos-research/speed-dreams) and a [Proxy for SUMOs TraCI API](https://github.com/argos-research/TraCI-Proxy)*
 
 Github handle: [@irgendwie](https://github.com/irgendwie)
 
