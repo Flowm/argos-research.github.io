@@ -25,7 +25,7 @@ If you want to add additional modules, just add them to the `src` directory.
 To add them to the loop, you need to change the `main.cc` file,
 which only contains a minimum of code.
 
-# Compliation
+# Compilation
 The SimCoupler can be compiled by issuing the following commands
 in the directory of the SimCoupler:
 <pre>mkdir -p build
@@ -37,7 +37,7 @@ make -j</pre>
 To run the simulation, a few repositories are needed
 
 ## General
-Independat of the choice of the simulators you are using,
+Independent of the choice of the simulators you are using,
 you need two repositories for the simulation:
 
 - **SimCoupler:** The simulation coupler (SimCoupler) contains code for the main simulation loop.
@@ -56,7 +56,7 @@ and is planned to be used as a middleware for the Veins simulator.
 
 SUMO provides its own API, which only allows one client at a time.
 We therefore wrote a Proxy to allow multiple connections to it,
-which is accessable via the **TraCI-Proxy** repository
+which is accessible via the **TraCI-Proxy** repository
 and will also be used by the SimCoupler.
 
 ### Robotics
@@ -86,10 +86,10 @@ a few programs need to be started in order:
 4. SD2
 
 # Program Flow
-As an example, the flow for the autonmous driving scenario:
+As an example, the flow for the autonomous driving scenario:
 1. SD2 module is started:
   - opens a socket for a SD2 connection
-  - waits for SD2 to transmit setup information (i.g. track)
+  - waits for SD2 to transmit setup information (i.e. track)
 2. SUMO module is started:
   - connects to the TraCI-Proxy
 3. Now a loop is started:
