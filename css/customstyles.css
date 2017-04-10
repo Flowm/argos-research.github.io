@@ -271,10 +271,6 @@ div#toc ul {
 
 div#toc ul li ul {
     padding-left:8px;
-
-}
-
-div#toc ul li ul {
     list-style: circle;
 }
 
