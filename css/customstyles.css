@@ -274,6 +274,10 @@ div#toc ul li ul {
 
 }
 
+div#toc ul li ul {
+    list-style: circle;
+}
+
 div#toc ul li ul li::before {
     content: "–  ";
 }
