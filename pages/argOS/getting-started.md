@@ -11,7 +11,7 @@ folder: "argOS"
 
 # General instructions
 
-### PXE
+## PXE
 
   * run "ip a" on your local machine and change the dev option inside bootstrap.sh to your LAN adapter
 
@@ -46,11 +46,11 @@ next-server 131.159.12.22;
 filename "raspberry/genode.img";
 ```
 
-### vagrant
+## vagrant
 
   * adjust memory size and number of cores inside Vagrant file to fit your hardware
 
-### genode project
+## genode project
 
   * change "PROJECT" inside Makefile to your needs
 
