@@ -61,6 +61,22 @@ $> make build_dir
 $> sudo make run
 ```
 
+# Troubleshoot
+
+## Vagrant memory error (if physical memory is less than 4096 MB)
+
+This exception arises from the configuration of virtualbox. Change the following settings in `Vagrantfile` to your needs.
+
+```ruby
+config.vm.provider "virtualbox" do |vb|
+# Display the VirtualBox GUI when booting the machine
+  vb.gui = false
+#
+# Customize the amount of memory on the VM:
+  vb.memory = 4096
+  vb.cpus = 2 
+```
+
 # Next Steps
 
 See [Getting Started](/getting-started.html)
