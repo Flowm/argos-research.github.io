@@ -71,10 +71,9 @@ This exception arises from the configuration of virtualbox. Change the following
 config.vm.provider "virtualbox" do |vb|
 # Display the VirtualBox GUI when booting the machine
   vb.gui = false
-#
 # Customize the amount of memory on the VM:
   vb.memory = 4096
-  vb.cpus = 2 
+  vb.cpus = 2
 ```
 
 # Next Steps
