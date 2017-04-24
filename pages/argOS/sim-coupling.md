@@ -17,6 +17,8 @@ In order to download, compile and start the simulation environment, run the foll
 <pre>
 # clone the testbed repository
 git clone https://github.com/argos-research/testbed.git
+# change directory to testbed
+cd testbed
 # checkout the simcoupler branch
 git checkout simcoupler
 # change directory to startup-scripts
