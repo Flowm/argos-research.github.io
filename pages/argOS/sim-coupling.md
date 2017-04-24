@@ -1,7 +1,7 @@
 ---
 title: Simulator Coupling
 keywords: vagrant, development, install
-last_updated: April 09, 2017
+last_updated: April 24, 2017
 tags: [development]
 summary: ""
 sidebar: main_sidebar
@@ -9,26 +9,45 @@ permalink: sim-coupling.html
 folder: "argOS"
 ---
 
+# Quick Step Guide
+
+In order to download, compile and start the simulation environment, run the following commands.
+
+**Caution:** This only works if the required dependencies are already installed.
+<pre class=bash>
+# clone the testbed repository
+git clone https://github.com/argos-research/testbed.git
+# checkout the simcoupler branch
+git checkout simcoupler
+# change directory to startup-scripts
+cd startup-scripts
+# run the shell script
+./sim_env.sh</pre>
+
 # File Structure
 <pre>+-- src
 |   +-- main.cc
 |   +-- sd2.cc
 |   +-- sumo.cc
+|   +-- ...
 +-- inc
+|   +-- master_sim.hh
 |   +-- sd2.hh
 |   +-- sumo.hh
+|   +-- ...
 +-- protobuf-messages
 +-- CMakeLists.txt</pre>
 
 The `src` directory contains all modules of the SimCoupler and the loop itself.
 If you want to add additional modules, just add them to the `src` directory.
 To add them to the loop, you need to change the `main.cc` file,
-which only contains a minimum of code.
+which should only contain a minimum of code.
+The protobuf-messages submodule contains all message definitions exchanged by the SimCoupler.
 
 # Compilation
 The SimCoupler can be compiled by issuing the following commands
 in the directory of the SimCoupler:
-<pre>mkdir -p build
+<pre class=bash>mkdir -p build
 cd build
 cmake ../
 make -j</pre>
@@ -100,6 +119,5 @@ This loop can be easily changed to run a different main simulator
 and add additional simulators to the coupler.
 
 # Open points
-- Implement classes for modules, which can be inherited
 - S/A VMs are not integrated into the SimCoupler
 - Logging routine is missing
