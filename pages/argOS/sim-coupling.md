@@ -14,7 +14,7 @@ folder: "argOS"
 In order to download, compile and start the simulation environment, run the following commands.
 
 **Caution:** This only works if the required dependencies are already installed.
-<pre class=bash>
+<pre>
 # clone the testbed repository
 git clone https://github.com/argos-research/testbed.git
 # checkout the simcoupler branch
@@ -47,7 +47,7 @@ The protobuf-messages submodule contains all message definitions exchanged by th
 # Compilation
 The SimCoupler can be compiled by issuing the following commands
 in the directory of the SimCoupler:
-<pre class=bash>mkdir -p build
+<pre>mkdir -p build
 cd build
 cmake ../
 make -j</pre>
