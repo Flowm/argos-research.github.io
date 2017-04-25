@@ -13,7 +13,20 @@ folder: "argOS"
 
 In order to download, compile and start the simulation environment, run the following commands.
 
-**Caution:** This only works if the required dependencies are already installed.
+**Caution:** The following dependencies need to be installed on Ubuntu, in order to successfully run the script:
+<pre>
+# SUMO
+sudo apt-get install -q=2 make g++ libxerces-c-dev libfox-1.6-dev automake libtool
+# SpeedDreams 2
+sudo apt-get install -q=2 make cmake g++ \
+alsa-base alsa-utils pulseaudio pulseaudio-utils \
+libopenscenegraph-dev libsdl2-dev libexpat1-dev libjpeg9-dev \
+libplib-dev libopenal-dev libvorbis-dev libpng12-dev \
+libenet-dev libboost-all-dev protobuf-compiler libprotobuf-dev
+# SimCoupler
+sudo apt-get install -q=2 make cmake g++ \
+libboost-all-dev protobuf-compiler libprotobuf-dev</pre>
+
 <pre>
 # clone the testbed repository
 git clone https://github.com/argos-research/testbed.git
