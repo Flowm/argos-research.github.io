@@ -78,4 +78,4 @@ config.vm.provider "virtualbox" do |vb|
 
 # Next Steps
 
-See [Getting Started](/getting-started.html)
+See [Getting Started](/platforms.html)
