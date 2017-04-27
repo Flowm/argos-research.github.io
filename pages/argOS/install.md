@@ -46,6 +46,7 @@ $> sudo make run
 ```
 
 ## Testbed
+For more information see [Simulatour Coupling](/sim-coupling.html) section
 ```sh
 # clone the testbed repository
 git clone https://github.com/argos-research/testbed.git
