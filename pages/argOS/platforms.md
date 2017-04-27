@@ -9,71 +9,25 @@ permalink: platforms.html
 folder: "argOS"
 ---
 
-# General instructions
+# General Instructions (local)
+1. Build the OS depending on your platform
+3. Get any prepared files if required (see *Pre-compiled files* section of each platform)
+2. Prepare the SD card (see [Setup SD-Card](/platforms.html#setup-sd-card))
+4. Copy your project files to the SD Card
 
-Execute the following steps:
+## Build the OS depending on your platform
 
-Change `PROJECT` and `GENODE_TARGET` in [operating-system/Makefile](https://github.com/argos-research/operating-system/blob/master/Makefile)
+According to the project, the following project parameters should be modified in [Makefile](https://github.com/argos-research/operating-system/blob/master/Makefile):
 
-## Generic Workflow
-1. Get the prepared u-boot files (see subsection **Files**)
-2. Prepare the SD card (see next section)
-3. Install your project files on the SD Card
+* `GENODE_BUILD_DIR` points to genode's building directory (e.g. `genode-focnados_panda`)
+* `PROJECT` is the name of the project (e.g. `demo`)
+* `GENODE_TARGET` is the target platform (e.g. `focnados_panda`) (see *Setup correct target device* section of each platform)
 
-* Notes
-
-  * `GENODE_BUILD_DIR` points to genode's building directory (e.g. `genode-focnados_panda`)
-  * `PROJECT` is the name of the project (e.g. `demo`)
+After modification, execute the following commands (unless otherwise specified):
 
 ```sh
 $> make build_dir
 $> sudo make run
-```
-## Install Project files
-
-* Mount your SD Card (e.g. `/dev/mmcblk0`) on `/mnt`
-
-* Execute the following steps
-
-```sh
-$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/image.elf /mnt
-$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/modules.list /mnt
-$> cp -R $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/genode /mnt
-```
-
-## Preboot Execution Environment (PXE) Configuration
-
-  * run "ip a" on your local machine and change the dev option inside bootstrap.sh to your LAN adapter
-
-  * the compiled image will be accessible via PXE boot
-
-  * all files for the SD card for Pandaboard to run PXE boot are inside the Panda SD folder
-
-  * a direct LAN connection between the Pandaboard and the local machine is requiered
-
-  * Setup with PXE Boot (e.g. PandaBoard ES)
-
-Extract from `/etc/dhcp/dhcpd.conf` (See [dhcpd sample configuration](https://wiki.ubuntuusers.de/ISC-DHCPD/#Beispielkonfiguration) for furhter details)
-
-```
-host pandaboardpxe {
-  hardware ethernet 02:02:01:07:16:80;
-  fixed-address 192.168.0.10;
-  option host-name "tuinf01-pandaboard";
-  filename "pandaboard/image.elf";
-  server-name "Pandaboard-PXEserv";
-}
-host odroid {
- hardware ethernet 00:10:75:2a:ae:e0;
- fixed-address 192.168.0.35;
- option host-name "odroid-u3";
- filename "odroid/uImage";
- server-name "Odroid-PXEserv";
-}
-
-# this is the PXE-Boot for this subnet
-next-server 131.159.12.22;
-filename "raspberry/genode.img";
 ```
 
 ## Setup SD-Card
@@ -141,6 +95,18 @@ if [[ -z "$S1" ]]; then
 fi
 ```
 
+## Copy your project files to the SD Card
+
+* Mount your SD Card (e.g. `/dev/mmcblk0`) on `/mnt`
+
+* Execute the following steps
+
+```sh
+$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/image.elf /mnt
+$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/modules.list /mnt
+$> cp -R $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/genode /mnt
+```
+
 # Platform Specific Instructions
 
 ## PandaBoard ES
@@ -167,7 +133,7 @@ Further (deeper) information about this topic can be found under the following l
 * [Linux on ARM](https://eewiki.net/display/linuxonarm/PandaBoard)
 
 
-## Raspberry PI
+## Raspberry PI Model B+
 
 ### Select correct target device
 Change `GENODE_TARGET` inside the `Makefile` to `foc_rpi`

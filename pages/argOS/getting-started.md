@@ -11,6 +11,40 @@ folder: "argOS"
 
 
 
+## Preboot Execution Environment (PXE) Configuration
+
+  * run "ip a" on your local machine and change the dev option inside bootstrap.sh to your LAN adapter
+
+  * the compiled image will be accessible via PXE boot
+
+  * all files for the SD card for Pandaboard to run PXE boot are inside the Panda SD folder
+
+  * a direct LAN connection between the Pandaboard and the local machine is requiered
+
+  * Setup with PXE Boot (e.g. PandaBoard ES)
+
+Extract from `/etc/dhcp/dhcpd.conf` (See [dhcpd sample configuration](https://wiki.ubuntuusers.de/ISC-DHCPD/#Beispielkonfiguration) for furhter details)
+
+```
+host pandaboardpxe {
+  hardware ethernet 02:02:01:07:16:80;
+  fixed-address 192.168.0.10;
+  option host-name "tuinf01-pandaboard";
+  filename "pandaboard/image.elf";
+  server-name "Pandaboard-PXEserv";
+}
+host odroid {
+ hardware ethernet 00:10:75:2a:ae:e0;
+ fixed-address 192.168.0.35;
+ option host-name "odroid-u3";
+ filename "odroid/uImage";
+ server-name "Odroid-PXEserv";
+}
+
+# this is the PXE-Boot for this subnet
+next-server 131.159.12.22;
+filename "raspberry/genode.img";
+```
 
 
 
@@ -62,4 +96,3 @@ For further instructions of pxe/tftp boot see pxe/tftp section.
 
 Further reading and explanation can be found if you take a look at our effort on the genode mailing list starting from here:
 * https://sourceforge.net/p/genode/mailman/genode-main/?viewmonth=201701&viewday=25
-
