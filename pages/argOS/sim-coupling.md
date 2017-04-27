@@ -15,6 +15,8 @@ In order to download, compile and start the simulation environment, run the foll
 
 **Caution:** The following dependencies need to be installed on Ubuntu, in order to successfully run the script:
 <pre>
+# General
+sudo apt-get install tmux
 # SUMO
 sudo apt-get install -q=2 make g++ libxerces-c-dev libfox-1.6-dev automake libtool
 # SpeedDreams 2
