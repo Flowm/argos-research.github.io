@@ -27,8 +27,8 @@ entries:
     - title: Install
       url: /install.html
       output: web
-    - title: Getting Started
-      url: /getting-started.html
+    - title: Platform Instructions
+      url: /platforms.html
       output: web
     - title: Simulator Coupling
       url: /sim-coupling.html
