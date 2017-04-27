@@ -11,6 +11,23 @@ folder: "argOS"
 
 # General instructions
 
+## Alternative (Platform) Install (-> move to platform instructions)
+
+Change `GENODE_TARGET` inside the `Makefile` (valid targets are):
+
+* `focnados_pbxa9`
+
+* `focnados_panda`
+
+* `foc_rpi`
+
+Execute the following steps:
+
+```sh
+$> make build_dir
+$> sudo make run
+```
+
 ## Preboot Execution Environment (PXE) Configuration
 
   * run "ip a" on your local machine and change the dev option inside bootstrap.sh to your LAN adapter
@@ -119,6 +136,8 @@ fi
 2. Prepare the SD card (see next section)
 3. Install your project files on the SD Card
 
+### Pre-compiled files
+
 ### Install Project files
 
 * Mount your SD Card (e.g. `/dev/mmcblk0`) on `/mnt`
@@ -154,4 +173,13 @@ Further (deeper) information about this topic can be found under the following l
 
 * [Building U-Boot](http://wiki.beyondlogic.org/index.php?title=Compiling_uBoot_RaspberryPi)
 
+### Pre-compiled files
+
 ## QEMU (PBXA9)
+Change `PROJECT` and `GENODE_TARGET` in [operating-system/Makefile](https://github.com/argos-research/operating-system/blob/master/Makefile)
+
+vor make run muss make vde ausgefuehr twerden
+
+```make
+GENODE_TARGET = focnados_pbxa9
+```

@@ -28,6 +28,7 @@ The following packages need to be installed (either from the corresponding
 
 # Quick Steps
 
+## Operating System
 The following steps bootstrap the virtual machine.
 ```sh
 $> git clone https://github.com/argos-research/operating-system.git
@@ -44,21 +45,18 @@ $> cd /vagrant
 $> sudo make run
 ```
 
-# Alternative (Platform) Install
-
-Change `GENODE_TARGET` inside the `Makefile` (valid targets are):
-
-* `focnados_pbxa9`
-
-* `focnados_panda`
-
-* `foc_rpi`
-
-Execute the following steps:
-
+## Testbed
 ```sh
-$> make build_dir
-$> sudo make run
+# clone the testbed repository
+git clone https://github.com/argos-research/testbed.git
+# change directory to testbed
+cd testbed
+# checkout the simcoupler branch
+git checkout simcoupler
+# change directory to startup-scripts
+cd startup-scripts
+# run the shell script
+./sim_env.sh
 ```
 
 # Troubleshoot
@@ -78,4 +76,4 @@ config.vm.provider "virtualbox" do |vb|
 
 # Next Steps
 
-See [Getting Started](/platforms.html)
+See [Plaftorm Instructions](/platforms.html)
