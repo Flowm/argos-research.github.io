@@ -11,21 +11,34 @@ folder: "argOS"
 
 # General instructions
 
-## Alternative (Platform) Install (-> move to platform instructions)
-
-Change `GENODE_TARGET` inside the `Makefile` (valid targets are):
-
-* `focnados_pbxa9`
-
-* `focnados_panda`
-
-* `foc_rpi`
-
 Execute the following steps:
+
+Change `PROJECT` and `GENODE_TARGET` in [operating-system/Makefile](https://github.com/argos-research/operating-system/blob/master/Makefile)
+
+## Generic Workflow
+1. Get the prepared u-boot files (see subsection **Files**)
+2. Prepare the SD card (see next section)
+3. Install your project files on the SD Card
+
+* Notes
+
+  * `GENODE_BUILD_DIR` points to genode's building directory (e.g. `genode-focnados_panda`)
+  * `PROJECT` is the name of the project (e.g. `demo`)
 
 ```sh
 $> make build_dir
 $> sudo make run
+```
+## Install Project files
+
+* Mount your SD Card (e.g. `/dev/mmcblk0`) on `/mnt`
+
+* Execute the following steps
+
+```sh
+$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/image.elf /mnt
+$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/modules.list /mnt
+$> cp -R $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/genode /mnt
 ```
 
 ## Preboot Execution Environment (PXE) Configuration
@@ -132,30 +145,19 @@ fi
 
 ## PandaBoard ES
 
-1. Get the prepared u-boot files (see subsection **Files**)
-2. Prepare the SD card (see next section)
-3. Install your project files on the SD Card
+### Select correct target device
 
-### Pre-compiled files
+Change `GENODE_TARGET` inside the `Makefile` to `focnados_panda`
 
-### Install Project files
-
-* Mount your SD Card (e.g. `/dev/mmcblk0`) on `/mnt`
-
-* Execute the following steps
-
-```sh
-$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/image.elf /mnt
-$> cp $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/modules.list /mnt
-$> cp -R $(GENODE_BUILD_DIR)/var/run/$(PROJECT)/genode /mnt
+```make
+GENODE_TARGET = focnados_panda
 ```
 
-* Notes
+### Pre-compiled files
+  * [U-boot Image](https://github.com/argos-research/operating-system/tree/master/Panda%20SD)
 
-  * `GENODE_BUILD_DIR` points to genode's building directory (e.g. `genode-focnados_panda`)
-  * `PROJECT` is the name of the project (e.g. `demo`)
 
-### Howto
+### References
 Further (deeper) information about this topic can be found under the following links:
 
 * [MLO & u-boot](http://elinux.org/Panda_How_to_MLO_%26_u-boot)
@@ -164,22 +166,42 @@ Further (deeper) information about this topic can be found under the following l
 
 * [Linux on ARM](https://eewiki.net/display/linuxonarm/PandaBoard)
 
-### Files
-* [U-boot Image](https://github.com/argos-research/operating-system/tree/master/Panda%20SD)
 
 ## Raspberry PI
 
-* [Uboot Image](https://nextcloud.os.in.tum.de/s/xAxEQYA57SIhnhz)
+### Select correct target device
+Change `GENODE_TARGET` inside the `Makefile` to `foc_rpi`
 
-* [Building U-Boot](http://wiki.beyondlogic.org/index.php?title=Compiling_uBoot_RaspberryPi)
+```make
+GENODE_TARGET = foc_rpi
+```
+
+### Flash (PXE Version)
+**We are assuming DISK=/dev/mmcblk0 as your sd card device**.
+```sh
+sudo dd if=./RaspberryPiU-Boot.img of=/dev/mmcblk0 bs=4M
+```
+
+For further PXE/tftp instructions [pxe/tftp](/pxe.html) section.
 
 ### Pre-compiled files
+* [RaspberryPiU-Boot.img](https://nextcloud.os.in.tum.de/s/xAxEQYA57SIhnhz)
+
+### References
+* [Building U-Boot](http://wiki.beyondlogic.org/index.php?title=Compiling_uBoot_RaspberryPi)
+
+
 
 ## QEMU (PBXA9)
-Change `PROJECT` and `GENODE_TARGET` in [operating-system/Makefile](https://github.com/argos-research/operating-system/blob/master/Makefile)
-
-vor make run muss make vde ausgefuehr twerden
+### Select correct target device
 
 ```make
 GENODE_TARGET = focnados_pbxa9
+```
+
+### Building
+* Execute the following steps
+```sh
+sudo make vde
+sudo make run
 ```

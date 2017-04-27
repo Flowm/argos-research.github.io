@@ -36,6 +36,9 @@ entries:
     - title: QEMU
       url: /qemu.html
       output: web
+    - title: PXE
+      url: /pxe.html
+      output: web
 
   - title: Contribute
     output: web
