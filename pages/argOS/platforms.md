@@ -166,7 +166,7 @@ GENODE_TARGET = focnados_pbxa9
 ```
 
 ### Building
-* Execute the following steps
+Execute the following steps
 ```sh
 sudo make vde
 sudo make run
