@@ -1,5 +1,5 @@
 ---
-title: QEMU Configuration
+title: QEMU Configuration (obsolete)
 keywords: vagrant, development, install
 last_updated: April 04, 2017
 tags: [development]

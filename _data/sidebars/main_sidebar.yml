@@ -33,9 +33,9 @@ entries:
     - title: Simulator Coupling
       url: /sim-coupling.html
       output: web
-    - title: QEMU
-      url: /qemu.html
-      output: web
+#    - title: QEMU
+#      url: /qemu.html
+#      output: web
     - title: PXE
       url: /pxe.html
       output: web
