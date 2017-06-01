@@ -2,7 +2,7 @@
 title: Install
 keywords: vagrant, development, install
 last_updated: March 10, 2017
-tags: [install]
+tags: [getting_started]
 summary: ""
 sidebar: main_sidebar
 permalink: install.html
