@@ -10,11 +10,6 @@ folder: "argOS"
 ---
 
 
-
-
-
-
-
 ## vagrant
 
   * adjust memory size and number of cores inside Vagrant file to fit your hardware

@@ -2,13 +2,13 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: ArgOS Research
+topnav_title: Navigation
 # this appears on the top navigation bar next to the home button
 
 site_title: ArgOS Research
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Your company
+company_name: Chair of Operating Systems - Technical University of Munich
 # this appears in the footer
 
 #github_editme_path: argos-research/argos-research.github.io/blob/master/pages/
@@ -28,7 +28,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Jekyll documentation theme
+feedback_subject_line: ArgOS research documentation project
 
 feedback_email: tomjohnson1492@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
@@ -95,7 +95,7 @@ sidebars:
 - main_sidebar
 - other
 
-description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
+description: "feed description"
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
