@@ -2,7 +2,7 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: ""
+topnav_title: ArgOS Research Documentation Project
 # this appears on the top navigation bar next to the home button
 
 site_title: ArgOS Research
@@ -91,9 +91,9 @@ defaults:
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- home_sidebar
+#- home_sidebar
 - main_sidebar
-- other
+#- other
 
 description: "feed description"
 # the description is used in the feed.xml file
