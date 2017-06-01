@@ -21,7 +21,7 @@ entries:
   #     url: /challenges.html
   #     output: web
 
-  - title: First Steps
+  - title: Overview
     output: web
     folderitems:
     - title: Install
