@@ -2,24 +2,24 @@
 
 entries:
 - title: sidebar
-  product: argOS Research
+  product: Navigation
   folders:
 
-  - title: Overview
-    output: web
-    folderitems:
-    - title: Welcome
-      url: /index.html
-      output: web
-    - title: Team
-      url: /team.html
-      output: web
-    - title: Roadmap
-      url: /roadmap.html
-      output: web
-    - title: Challenges
-      url: /challenges.html
-      output: web
+  # - title: Overview
+  #   output: web
+  #   folderitems:
+  #   - title: Welcome
+  #     url: /index.html
+  #     output: web
+  #   - title: Team
+  #     url: /team.html
+  #     output: web
+  #   - title: Roadmap
+  #     url: /roadmap.html
+  #     output: web
+  #   - title: Challenges
+  #     url: /challenges.html
+  #     output: web
 
   - title: First Steps
     output: web
@@ -40,18 +40,18 @@ entries:
       url: /pxe.html
       output: web
 
-  - title: Contribute
-    output: web
-    folderitems:
-    - title: How to contribute
-      url: /contribute.html
-      output: web
-    - title: Repository Structure
-      url: /repo_structure.html
-      output: web
-    - title: Code Structure
-      url: /code_structure.html
-      output: web
-    - title: Coding Standards
-      url: /code_standards.html
-      output: web
+  # - title: Contribute
+  #   output: web
+  #   folderitems:
+  #   - title: How to contribute
+  #     url: /contribute.html
+  #     output: web
+  #   - title: Repository Structure
+  #     url: /repo_structure.html
+  #     output: web
+  #   - title: Code Structure
+  #     url: /code_structure.html
+  #     output: web
+  #   - title: Coding Standards
+  #     url: /code_standards.html
+  #     output: web
