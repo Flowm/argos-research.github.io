@@ -30,6 +30,9 @@ entries:
     - title: Platform Instructions
       url: /platforms.html
       output: web
+    - title: Library ports for Genode
+      url: /library-ports.html
+      output: web
     - title: Simulator Coupling
       url: /sim-coupling.html
       output: web
